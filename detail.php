@@ -1,6 +1,6 @@
 <?php
-$user = "tsuji";
-$pass = "rakus123";
+$user = "mysql";
+$pass = "mysql";
 if(empty($_GET["id"])) {
     echo "IDを正しく入力してください。";
     exit;
