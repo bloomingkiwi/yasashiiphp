@@ -8,8 +8,7 @@
 <h1>レシピの一覧</h1>
 <a href="form.html">レシピの新規登録</a>
 <?php
-$user='mysql';
-$pass='mysql';
+require_once __DIR__.'/../../db_config.php';
 try {
     $dbh = new PDO('mysql:host=localhost;dbname=db1;charset=utf8', $user, $pass);
 $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
