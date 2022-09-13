@@ -35,4 +35,5 @@ try {
     ENT_QUOTES) . "<br>";
     exit;
 }
+echo '<a href="index.php">トップページへ戻る</a>';
 ?>

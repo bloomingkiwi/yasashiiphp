@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>レシピの一覧</title>
+</head>
+<body>
+<h1>レシピの一覧</h1>
+<a href="form.html">レシピの新規登録</a>
 <?php
 $user='mysql';
 $pass='mysql';
@@ -20,6 +29,11 @@ foreach($result as $row) {
         "2" => "普通",
         "3" => "難しい",
     }."</td>".PHP_EOL;
+    echo '<td>'.PHP_EOL;
+    echo '<a href="detail.php?id='.htmlspecialchars($row['id'],ENT_QUOTES).'">詳細</a>'.PHP_EOL;
+    echo '<a href="edit.php?id='.htmlspecialchars($row['id'],ENT_QUOTES).'">変更</a>'.PHP_EOL;
+    echo '<a href="delete.php?id='.htmlspecialchars($row['id'],ENT_QUOTES).'">削除</a>'.PHP_EOL;
+    echo '</td>'.PHP_EOL;
     echo "</tr>".PHP_EOL;
 }
 $dbh = null;
@@ -28,3 +42,5 @@ $dbh = null;
     exit;
 }
 ?>
+</body>
+</html>
